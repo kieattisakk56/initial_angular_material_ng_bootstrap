@@ -14,6 +14,10 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AuthGuardService } from './auth-guard.service';
+import { FormlyModule } from '@ngx-formly/core';
+import { CustomInputComponent } from './components/formly/fields/custom-input/custom-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyMaterialModule } from '@ngx-formly/material';
 
 @NgModule({
   declarations: [AppComponent, ContentLayoutComponent, LoginLayoutComponent],
@@ -30,6 +34,10 @@ import { AuthGuardService } from './auth-guard.service';
     // StatesModule,
     PipeModule,
     CoreModule,
+    FormlyModule.forRoot(),
+    ReactiveFormsModule,
+
+   
 
   ],
   providers: [
